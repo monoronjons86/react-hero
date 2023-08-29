@@ -4,7 +4,7 @@ import Price from './Price';
 
 const Card = () => {
     return (
-        <div>
+        <div className="bg-primary">
             <Title></Title>
             <Price></Price>
         </div>
