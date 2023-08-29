@@ -4,7 +4,9 @@ import Price from './Price';
 
 const Card = () => {
     return (
-        <div className="bg-primary">
+        <div style={{
+            backgroundColor:"red"
+        }}>
             <Title></Title>
             <Price></Price>
         </div>
