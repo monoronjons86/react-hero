@@ -67,6 +67,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.one{
+  width: 200px;
+  height: 300px;
+  background-color:gray;
+}
+.btn1{
+  background-color:green;
+  width:30px;
+  margin-top: 10px;
+  margin-right:10px;
+
+}
+.btn2{
+  background-color: red;
+  width:30px;
+  margin-top: 10px;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

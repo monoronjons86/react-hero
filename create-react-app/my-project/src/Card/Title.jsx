@@ -1,9 +1,11 @@
 import React from 'react';
+import Basic from '../Events/Basic';
 
 const Title = () => {
     return (
-        <div>
-            <h1>Ak47</h1>
+        <div className='one'>
+            <Basic></Basic>
+
         </div>
     );
 };
