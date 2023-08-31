@@ -7,7 +7,7 @@ function App() {
       <Person name="Rubel" nayika="Moushumi"></Person>
       <Person name="BappaRaz" nayika="Chekha"></Person>
       <h1>Its my friend</h1>
-      <Friend></Friend>
+      <Friend age="23"></Friend>
 
     </div>
   );
@@ -16,15 +16,17 @@ function Person(props){
   console.log(props)
   return (
     <div className="person" >
-       <h1>{props.name} {props.nayika}</h1>
+       <h1>{props.name}</h1>
+       <h1>Nayika:{props.nayika}</h1>
        <p>Profession:Cricket</p>
     </div>
   ) 
 }
-function Friend(){
+function Friend(props){
+  console.log(props)
   return(
     <div>
-      <h1>Ajoy devGan</h1>
+      <h1>{props.age}</h1>
       <p>Job:Maramari</p>
     </div>
   )
