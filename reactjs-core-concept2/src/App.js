@@ -1,29 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
 
 function App() {
-  const products=[
-    {Name:"laptop",price:75000},
-    {Name:"mobile",price:15000},
-    {Name:"watch",price:2000}
-  ]
+
   return (
     <div className="App">
-      {
-        products.map(product=><Product name={product.Name} price={product.price}></Product>)
-      }
-     {/* <Product name="laptop"></Product>
-     <Product name="laptop" price="45000"></Product> */}
+      <Country></Country>
     </div>
   );
 }
-function Product(props){
+function Country(){
+  const [count,setCount]=useState(55)
+  //increase
+  const increaseCount=()=>{
+    const newCount=count+1
+    setCount(newCount)
+  }
+      //decrease
+const deCount=()=>setCount(count -1)
   return(
-    <div className="product">
-      <h3>Name:{props.name}</h3>
-      <p>Price:{props.price}</p>
-    </div>
+    <div>
+      <h1>Count:{count}</h1> 
+      <button onClick={increaseCount}>Increase</button>
+      <button onClick={deCount}>Decrease</button>
+      </div>
   )
 }
+// const products=[
+//   {Name:"laptop",price:75000},
+//   {Name:"mobile",price:15000},
+//   {Name:"watch",price:2000}
+// ]
+// {
+//   products.map(product=><Product name={product.Name} price={product.price}></Product>)
+// }
+// {/* <Product name="laptop"></Product>
+// <Product name="laptop" price="45000"></Product> */}
+// 
 
 export default App;
