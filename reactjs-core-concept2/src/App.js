@@ -1,12 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 
 function App() {
 
   return (
     <div className="App">
-      <Country></Country>
+      {/* <Country></Country> */}
+      <ExternalUsers></ExternalUsers>
     </div>
   );
 }
@@ -25,6 +26,23 @@ const deCount=()=>setCount(count -1)
       <button onClick={increaseCount}>Increase</button>
       <button onClick={deCount}>Decrease</button>
       </div>
+  )
+}
+function ExternalUsers(){
+  const[users,setUsers]=useState([])
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(res=>res.json())
+    .then(data=>setUsers(data))
+  },[])
+  return(
+    <div>
+      <h2>External users</h2>
+      {/* <p>{users.length}</p> */}
+      {
+        users.map(user=> <li>{user.name}</li>)
+      }
+    </div>
   )
 }
 // const products=[
