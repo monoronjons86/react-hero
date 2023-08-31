@@ -2,10 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const nayoks=['Rubel','BappaRaz','kubar','salman','Riyaz','hero']
   return (
     <div>
-      <Person name="Rubel" nayika="Moushumi"></Person>
-      <Person name="BappaRaz" nayika="Chekha"></Person>
+      {
+        nayoks.map(nayok=><li>Name:{nayok}</li>)
+      }
+      {/* <Person name={nayoks[0]} nayika="Moushumi"></Person>
+      <Person name="BappaRaz" nayika="Chekha"></Person> */}
       <h1>Its my friend</h1>
       <Friend age="23"></Friend>
 
