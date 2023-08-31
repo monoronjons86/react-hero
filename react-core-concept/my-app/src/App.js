@@ -3,10 +3,21 @@ import './App.css';
 
 function App() {
   const nayoks=['Rubel','BappaRaz','kubar','salman','Riyaz','hero']
+  const singers=[
+    {Name:'Rana',Age:"22",job:'computer operator'},
+    {Name:'Tonmoy',Age:"23",job:"Google"},
+    {Name:'Roman',Age:"24",job:"Network engineer"}
+  ]
   return (
     <div>
       {
         nayoks.map(nayok=><li>Name:{nayok}</li>)
+      }
+      {
+        nayoks.map(nayok=><Person name={nayok}></Person>)
+      }
+      {
+        singers.map(singer=><Person name={singer.Name}></Person>)
       }
       {/* <Person name={nayoks[0]} nayika="Moushumi"></Person>
       <Person name="BappaRaz" nayika="Chekha"></Person> */}
