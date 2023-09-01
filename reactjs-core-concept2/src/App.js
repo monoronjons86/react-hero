@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       {/* <Country></Country> */}
+      <Man></Man>
       <ExternalUsers></ExternalUsers>
     </div>
   );
@@ -28,6 +29,7 @@ const deCount=()=>setCount(count -1)
       </div>
   )
 }
+
 function ExternalUsers(){
   const[users,setUsers]=useState([])
   useEffect(()=>{
@@ -56,5 +58,17 @@ function ExternalUsers(){
 // {/* <Product name="laptop"></Product>
 // <Product name="laptop" price="45000"></Product> */}
 // 
+const Man=()=>{
+   const [count,setCount] =useState(55)
+   const increaseCount=()=>{
+    const newCount=count+1
+    setCount(newCount)
+   }
+  return(
+    <div>
+      <button onClick={increaseCount}>Increase</button>
 
+    </div>
+  )
+}
 export default App;
