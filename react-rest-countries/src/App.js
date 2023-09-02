@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <LoadCountries></LoadCountries>
-
+      
     </div>
 
   );
@@ -33,6 +33,7 @@ function Country(props){
     <div>
       <h2>Name:{props.name}</h2>
       <h4>Population:{props.population}</h4>
+      
 
     </div>
   )
