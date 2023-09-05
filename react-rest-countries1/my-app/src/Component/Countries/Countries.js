@@ -25,6 +25,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Country from '../Country/Country';
+import './Countries.css'
 
 const Countries = () => {
     const[countries,setCountries]=useState([])
@@ -34,18 +35,20 @@ const Countries = () => {
         .then(data=>setCountries(data))
     },[])
     return (
-        <div>
+        <div >
             <h1>this is my first practice.{countries.length}</h1>
             {
                 countries.map(country=>console.log(country))
             }
-            {
-                countries.map(country=><Country 
-                    country={country}
-                    //  name={country.name.common}
-                    //   region={country.region}
-                     ></Country>)
-            }
+            <div className='countries-container'>
+                {
+                    countries.map(country=><Country 
+                        country={country}
+                        //  name={country.name.common}
+                        //   region={country.region}
+                         ></Country>)
+                }
+            </div>
         </div>
     );
 };
