@@ -5,20 +5,15 @@ import './App.css'
 import Devices from './Component/Devices/Devices'
 
 function App() {
- 
+  const [count, setCount] = useState(0)
 
   return (
     <>
     <Devices name="Uphone" price="13000"></Devices>
     <Devices name="Samsung" price="14000"></Devices>
 
-      
     </>
   )
 }
-function Car(){
-  return(
-    <div>hello</div>
-  )
-}
+
 export default App
