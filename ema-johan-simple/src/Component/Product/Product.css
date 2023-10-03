@@ -9,5 +9,20 @@
     height: 286px;
     margin:7px;
     border-radius: 8px;
-
+}
+.product-name{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 21px;
+    line-height: 25px;
+    color:#0E161A;
+    
+}
+.product-info{
+    margin-left: 14px;
+}
+.product-info{
+    margin-top: 5px;
 }
